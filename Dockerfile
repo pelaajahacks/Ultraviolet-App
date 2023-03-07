@@ -12,8 +12,6 @@ RUN npm install
 # build final
 FROM gcr.io/distroless/nodejs:16
 
-EXPOSE 8080/tcp
-
 COPY --from=builder /app /
 
 CMD ["src/index.js"]
